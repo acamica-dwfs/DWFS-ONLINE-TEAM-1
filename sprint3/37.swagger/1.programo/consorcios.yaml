@@ -204,7 +204,6 @@ paths:
               type: "integer"
               format: "int32"
 
-
   /edificio:
     post:
       tags:
@@ -225,7 +224,6 @@ paths:
       responses:
         default:
           description: "Operacion Sactifactoria"
-
 
 definitions:
   Propietarios:
