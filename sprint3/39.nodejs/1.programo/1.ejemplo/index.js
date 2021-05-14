@@ -6,7 +6,8 @@ console.log("Hola Mundo");
 var Lang = ['Pera', 'Banana', 'Limones'];
 
 //muestro las frutas
-console.log(Lang);
+console.table(Lang);
+
 
 Lang.map( element  => console.log(element))
 
@@ -19,9 +20,3 @@ console.log(cant);
 var found = Lang.find(element => element > 'Banana');
 console.log(found);
 
-
-//agregamos un nueva fruta
-Lang.push('Naranja');
-console.log(Lang);
-console.log("acamica")
-// expected output: Array [ 'java', 'c', 'python', 'node' ]
