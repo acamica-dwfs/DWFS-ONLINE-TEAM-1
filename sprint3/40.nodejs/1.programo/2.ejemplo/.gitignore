@@ -1,0 +1,4 @@
+## aqui   lo que no quiero versionar
+package-lock.json
+node_modules/*
+.env
