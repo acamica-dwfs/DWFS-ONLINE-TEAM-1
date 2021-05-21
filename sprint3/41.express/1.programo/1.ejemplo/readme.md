@@ -5,10 +5,10 @@
    npm install  nodemon -D
 4. creamos el archivo de  server.js e insertamos
    const express = require('express')
-   const app = express()
+   const app2 = express()
    const port = 3000
-   app.listen(port, () => {
-   console.log(`Example app listening at http://localhost:${port}`)
+   app2.listen(port, () => {
+   console.log(`Example app2 listening at http://localhost:${port}`)
    })
 5. ejecutamos la aplicacion
    nodemon server.js 
