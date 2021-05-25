@@ -1,0 +1,21 @@
+{
+  "name": "1.ejemplo",
+  "version": "1.0.0",
+  "description": "1. iniciar  el proyecto con  npm init -y 2. instalar express    npm install express 3. instalar una depencia de desarrollo    npm install  nodemon -D 4. creamos el archivo de  server.js e insertamos    const express = require('express')    const app = express()    const port = 3000    app.listen(port, () => {    console.log(`Example app listening at http://localhost:${port}`)    }) 5. ejecutamos la aplicacion    nodemon server.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "nodemon": "^2.0.7"
+  }
+}
