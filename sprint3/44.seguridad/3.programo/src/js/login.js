@@ -1,6 +1,6 @@
 const inputs = document.querySelectorAll("input")
 const btnlogin= document.getElementById("login")
-const URL = "http://localhost:3000"
+const URL_BACKEND = "http://localhost:3000"
 
 btnlogin.addEventListener("click", ()=> {
     console.log(inputs[0].value)
@@ -15,7 +15,7 @@ btnlogin.addEventListener("click", ()=> {
 
 const login =  async (data) =>  {
     try {
-        const result = await fetch(URL + "/login", {
+        const result = await fetch(URL_BACKEND + "/login", {
             method: 'post',
             headers: {
                 'Accept': 'application/json, text/plain, */*',
