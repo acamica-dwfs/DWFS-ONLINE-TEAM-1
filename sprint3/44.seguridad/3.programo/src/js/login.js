@@ -6,10 +6,20 @@ btnlogin.addEventListener("click", ()=> {
     console.log(inputs[0].value)
     console.log(inputs[1].value)
     const data = {
-        email:inputs[0].value,
+        user:inputs[0].value,
         pass:inputs[1].value
     }
-    login(data)
+    login(data).then(data => {
+        let user  = {
+            token: data.token,
+            user:nputs[0].value
+        }
+        localStorage.setItem("user",  JSON.stringify(user))
+        window.location.href = ".."
+        console.log(data)
+    }).catch(e => {
+        console.log(e)
+    })
 })
 
 

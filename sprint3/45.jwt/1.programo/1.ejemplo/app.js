@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config()
 const app = express();
 const port = 4000
+require('dotenv').config()
 const llave = process.env.LANG
 
 app.use(express.json());
