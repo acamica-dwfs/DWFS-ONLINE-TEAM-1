@@ -21,6 +21,7 @@ pelicula.findOne({_id:'60c00d91dbcc7a5b1c050b29'}).then((resultado) =>{
     resultado.director = 'Wes Craven';
     resultado.genero = 'Terror';
     resultado.ano = '1984';
+    resultado.prueba = "mi prueba"
     resultado.save();
     console.log(resultado);
     console.log( "actualizado correctamente ");

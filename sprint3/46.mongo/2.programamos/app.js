@@ -25,7 +25,13 @@ app.get("/crear", (req, res) => {
    });
 })
 
+app.get("/listar", (req, res) => {
+    menu.find().then( (resultado) => {
+        console.log(resultado);
+        res.status(200).json({ status : true ,  resultado  : resultado})
+    });
+})
+
 app.listen(3000,  () => {
     console.log('listening on 3000')
 })
-
