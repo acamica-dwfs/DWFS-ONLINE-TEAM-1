@@ -8,14 +8,13 @@ const menu  =  mongose.model("plato", {
     tipo_de_plato : String
 })
 
-app.get("/crear", (req, res) => {
-   let plato = {
-       plato : "bandeja paisa",
-       valor : 20000,
-       tipo_de_plato : "mixto"
-   }
+app.post("/crear", (req, res) => {
+    const {plato, valor, tipo_de_plato} = req.body
+    if(!plato ||  !valor || !tipo_de_plato) {
+        res.status(400).json({ status : false ,msg: "datos  flatantes"})
+    }
 
-   const  result  =  new menu(plato);
+   const  result  =  new menu(req.body);
    result.save().then( response => {
        console.log(" producto creado");
        res.status(201).json({ status : true ,  resultado  : plato})
