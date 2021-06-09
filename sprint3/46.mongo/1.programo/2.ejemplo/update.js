@@ -16,7 +16,7 @@ const pelicula = mongoose.model('peliculas', {
 });
 
 //Actualizamos los datos
-pelicula.findOne({_id:'6000e368c14aba282392e8ce'}).then((resultado) =>{
+pelicula.findOne({_id:'60c00d91dbcc7a5b1c050b29'}).then((resultado) =>{
     resultado.titulo = 'Pesadilla en la calle del infierno';
     resultado.director = 'Wes Craven';
     resultado.genero = 'Terror';

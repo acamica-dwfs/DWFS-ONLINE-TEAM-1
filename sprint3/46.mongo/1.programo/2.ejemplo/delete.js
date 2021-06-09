@@ -15,8 +15,9 @@ const pelicula = mongoose.model('peliculas', {
 
 
 //Elimino  los datos del id 5efa54e6beaaeb0474d496ef
-pelicula.delete({ _id: '6000e3ebf7895d286cdb9023' }).then(function (error,resp) {
+pelicula.deleteOne({ _id: '60c00fb1d541185e6fd4ddf8' }).then(function (resp, error) {
     console.log(resp);
+    console.log(error);
 }).catch(e => {
     console.log("ha ocurrido un error" + e)
 });

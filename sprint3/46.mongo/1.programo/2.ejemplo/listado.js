@@ -13,7 +13,7 @@ const pelicula = mongoose.model('peliculas', {
     ano: Date
 });
 
-
+//ORM  ==> MONGOSE ==>  CONEXION A LA DATABASE
 pelicula.find().then(function (resultado) {
     console.log(resultado);
 });
