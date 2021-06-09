@@ -31,6 +31,23 @@ app.get("/listar", (req, res) => {
     });
 })
 
+app.update('/actualziar',  (req, res) => {
+    const {plato, valor, id} = req.body
+    if (!plato || !valor || !id) {
+        return res.status(400).json({status: false, msg: "datos  flatantes"})
+    }
+
+    menu.findOne({_id: id}).then((resultado) => {
+        if (!resultado) {
+            return res.status(400).json({status: false, msg: "no se encuentra el plato"})
+        }
+
+        resultado.plato = plato;
+        resultado.valor = valor;
+        return res.status(200).json({status: false, msg: "plato modificado"})
+    })
+})
+
 app.listen(3000,  () => {
     console.log('listening on 3000')
 })
