@@ -1,10 +1,10 @@
-var express = require('express');
-var app = express();
+//var express = require('express');
+//var app = express();
 const sequelize = require('./conexion.js');
 
-async function findAllRows() {
+function deleteRows() {
     sequelize.query('DELETE FROM restaurant WHERE ID_RESTO = ?',
-        { replacements: [2] }
+        { replacements: [3] }
     ).then(result =>{
         console.log(result)
     }).catch( e => {
@@ -12,8 +12,8 @@ async function findAllRows() {
     })
 }
 
-findAllRows();
+deleteRows();
 
-app.listen(3000, function () {
-    console.log('Sistema armado en el puerto 3000!');
-});
+//app.listen(3000, function () {
+  //  console.log('Sistema armado en el puerto 3000!');
+//});

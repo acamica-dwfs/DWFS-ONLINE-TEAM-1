@@ -1,10 +1,10 @@
-var express = require('express');
-var app = express();
+//var express = require('express');
+//var app = express();
 const sequelize = require('./conexion.js');
 
-async function findAllRows() {
+async function updateRow() {
     sequelize.query('UPDATE restaurant SET ADRESSE = "Bares de buenos aires" WHERE ID_RESTO = ?',
-        { replacements: [1]}
+        { replacements: [5]}
     ).then(result => {
         console.log(result)
     }).catch( e => {
@@ -12,8 +12,9 @@ async function findAllRows() {
     })
 }
 
-findAllRows();
+updateRow();
 
+/*
 app.listen(3000, function () {
     console.log('Sistema armado en el puerto 3000!');
-});
+});*/

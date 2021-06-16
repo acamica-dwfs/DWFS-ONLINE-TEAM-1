@@ -1,11 +1,10 @@
-var express = require('express');
-var app = express();
+//var express = require('express');
+//var app = express();
 const sequelize = require('./conexion');
 
-
-async function findAllRows() {
+ function selectWhereRows() {
       sequelize.query('SELECT * FROM restaurant WHERE NOM_RESTO = ?',
-        { replacements: ['Cocotte'], type: sequelize.QueryTypes.SELECT }
+        { replacements: ['Cocotte2'], type: sequelize.QueryTypes.SELECT }
     ).then(function (projects) {
         console.log(" datos encontrados:")
         console.log(projects)
@@ -14,7 +13,10 @@ async function findAllRows() {
         console.log("error  en la insercion " + e)
     })
 }
+selectWhereRows()
 
+
+/*
 app.get( "/productos",    (req, res) => {
       sequelize.query('SELECT * FROM restaurant WHERE NOM_RESTO = ?',
           { replacements: ['test 1'], type: sequelize.QueryTypes.SELECT }
@@ -26,10 +28,9 @@ app.get( "/productos",    (req, res) => {
           console.log("error  en la insercion " + e)
            res.status(400).json({  status: false})
       })
-})
+})*/
 
-findAllRows()
-
+/*
 app.listen(3000, function () {
     console.log('Sistema armado en el puerto 3000!');
-});
+});*/

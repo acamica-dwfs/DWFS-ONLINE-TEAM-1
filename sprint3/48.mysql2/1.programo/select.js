@@ -1,9 +1,8 @@
-var express = require('express');
-var app = express();
+//var express = require('express');
+//var app = express();
 const sequelize = require('./conexion.js');
 
-
-async function findAllRows() {
+ function selectRows() {
     sequelize.query("SELECT * FROM restaurant limit 3", { type: sequelize.QueryTypes.SELECT })
         .then(result => {
             console.log(result);
@@ -12,9 +11,9 @@ async function findAllRows() {
         })
 }
 
-findAllRows();
+selectRows();
 
 
-app.listen(3000, function () {
-    console.log('Sistema armado en el puerto 3000!');
-});
+//app.listen(3000, function () {
+//    console.log('Sistema armado en el puerto 3000!');
+//});
