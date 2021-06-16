@@ -1,5 +1,3 @@
-//var express = require('express');
-//var app = express();
 const sequelize = require('./conexion.js');
 
 async function updateRow() {
@@ -13,8 +11,3 @@ async function updateRow() {
 }
 
 updateRow();
-
-/*
-app.listen(3000, function () {
-    console.log('Sistema armado en el puerto 3000!');
-});*/

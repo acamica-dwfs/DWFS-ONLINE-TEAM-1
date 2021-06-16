@@ -1,5 +1,4 @@
-//var express = require('express');
-//var app = express();
+
 const sequelize = require('./conexion.js');
 
  function selectRows() {
@@ -12,8 +11,3 @@ const sequelize = require('./conexion.js');
 }
 
 selectRows();
-
-
-//app.listen(3000, function () {
-//    console.log('Sistema armado en el puerto 3000!');
-//});
