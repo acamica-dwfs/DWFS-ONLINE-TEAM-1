@@ -1,4 +1,5 @@
 const express = require('express');
+const sequelize = require('./conexion.js');
 const app = express();
 
 app.get('/estudiantes',  async (req, res) =>{
@@ -8,9 +9,7 @@ app.get('/estudiantes',  async (req, res) =>{
         'left join cursos c using(id_curso)\n' +
         'order by  es.nombre DESC \n' +
         'limit 2'
-
     try {
-        const sequelize = require('./conexion.js');
         const result = await  sequelize.query(query,  {type: sequelize.QueryTypes.SELECT})
         console.log(result)
         res.status(200).json({result})
